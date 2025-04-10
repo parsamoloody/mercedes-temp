@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes-Benz S-Class Maybach Viewer</title>
+    <style>
+        body { 
+            margin: 0; 
+            overflow: hidden; 
+        }
+        canvas { 
+            display: block; 
+        }
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">Loading model...</div>
+    
+    <!-- Load Three.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.min.js"></script>
+    
+    <script>
+        // Wait for all scripts to load
+        window.addEventListener('load', init);
+        
+        function init() {
+            const loadingElement = document.querySelector('.loading');
+            
+            if (!window.THREE) {
+                loadingElement.textContent = 'Three.js failed to load!';
+                return;
+            }
+            
+            // Scene setup
+            const scene = new THREE.Scene();
+            scene.background = new THREE.Color(0xffffff);
+            
+            // Camera setup
+            const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 3, 1000);
+            camera.position.set(2, 1, 5);
+            
+            // Renderer setup
+            const renderer = new THREE.WebGLRenderer({ 
+                antialias: true,
+                alpha: false
+            });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.shadowMap.enabled = true;
+            renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+            document.body.appendChild(renderer.domElement);
+            
+            // Lighting - Three-point lighting setup
+            const ambientLight = new THREE.AmbientLight(0x404040, 0.5);
+            scene.add(ambientLight);
+            
+            // Key light
+            const keyLight = new THREE.DirectionalLight(0xffffff, 2.3);
+            keyLight.position.set(5, 5, 5);
+            keyLight.castShadow = true;
+            keyLight.shadow.mapSize.width = 2048;
+            keyLight.shadow.mapSize.height = 2048;
+            scene.add(keyLight);
+            
+            // Fill light
+            const fillLight = new THREE.DirectionalLight(0xffffff, 0.75);
+            fillLight.position.set(-5, 3, 2);
+            scene.add(fillLight);
+            
+            // Back light
+            const backLight = new THREE.DirectionalLight(0xffffff, 0.5);
+            backLight.position.set(0, 5, -5);
+            scene.add(backLight);
+            
+            // Add subtle hemisphere light for environmental lighting
+            const hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.3);
+            hemiLight.position.set(0, 10, 0);
+            scene.add(hemiLight);
+            
+            // Orbit controls - DISABLED ROTATION AND ZOOM
+            const controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableRotate = false; // Disable rotation
+            controls.enableZoom = false;   // Disable zoom
+            controls.enablePan = false;    // Disable panning
+            controls.enableDamping = false; // Disable damping since we're not rotating
+            
+            // Add ground plane
+            const groundGeometry = new THREE.PlaneGeometry(20, 20);
+            const groundMaterial = new THREE.MeshStandardMaterial();
+            const ground = new THREE.Mesh(groundGeometry, groundMaterial);
+            ground.rotation.x = 10;
+            scene.add(ground);
+            
+            // GLB Loader
+            const loader = new THREE.GLTFLoader();
+            const modelPath = '../assets/model/2021_mercedes-benz_s-class_maybach.glb';
+            
+            let model;
+            let mixer; // For animations
+            
+            loader.load(
+                modelPath,
+                function (gltf) {
+                    model = gltf.scene;
+                    
+                    // Enable shadows for all children
+                    model.traverse(function(child) {
+                        if (child.isMesh) {
+                            child.castShadow = true;
+                            child.receiveShadow = true;
+                        }
+                    });
+                    
+                    // Center and scale the model
+                    const box = new THREE.Box3().setFromObject(model);
+                    const center = box.getCenter(new THREE.Vector3());
+                    const size = box.getSize(new THREE.Vector3()).length();
+                    const scale = 5 / size;
+                    
+                    model.position.set(-center.x * scale, -center.y * scale, -center.z * scale);
+                    model.scale.set(scale, scale, scale);
+                    
+                    // Apply initial X rotation (0 degrees)
+                    model.rotation.x = THREE.MathUtils.degToRad(0);
+                    
+                    // Check for animations
+                    if (gltf.animations && gltf.animations.length) {
+                        mixer = new THREE.AnimationMixer(model);
+                        const clip = gltf.animations[0];
+                        const action = mixer.clipAction(clip);
+                        action.play();
+                    }
+                    
+                    scene.add(model);
+                    loadingElement.style.display = 'none';
+                },
+                undefined,
+                function (error) {
+                    console.error('Error loading GLB model:', error);
+                    loadingElement.textContent = 'Failed to load model';
+                }
+            );
+            
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+            
+            // Auto-rotation animation
+            const clock = new THREE.Clock();
+            const autoRotateSpeed = 0.25;
+            
+            // Animation loop
+            function animate() {
+                requestAnimationFrame(animate);
+                
+                const delta = clock.getDelta();
+                
+                // Auto-rotate model
+                if (model) {
+                    model.rotation.y += autoRotateSpeed * delta;
+                }
+                
+                // Update animation mixer
+                if (mixer) {
+                    mixer.update(delta);
+                }
+                
+                renderer.render(scene, camera);
+            }
+            
+            animate();
+        }
+    </script>
+</body>
+</html>

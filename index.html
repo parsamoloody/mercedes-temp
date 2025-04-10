@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="fa">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="HVAC Template">
-    <meta name="keywords" content="HVAC, unica, creative, html">
+    <meta name="description" content="قالب سایت باشگاه مرسدس">
+    <meta name="keywords" content="باشگاه مرسدس, خودرو, لوکس, اتومبیل">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/x-icon" href="/images/logo.svg">    
-    <title>MERCEDES CLUB</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.svg">
+    <title>باشگاه مرسدس</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -24,8 +24,13 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
-
+<style>
+    body {
+        font-family: "!arial", sans-serif;
+    }
+</style>
 <body>
+    <!-- Page Preloder -->
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -37,19 +42,35 @@
         <div class="offcanvas__widget">
             <a href="#"><i class="fa fa-cart-plus"></i></a>
             <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
-            <a href="#" class="primary-btn">Add Car</a>
+            <a href="#" class="primary-btn">اضافه کردن خودرو</a>
         </div>
         <div class="offcanvas__logo">
-            <a href="./index.html"><img src="img/logo.png" alt="logo mercedes" ></a>
+            <a href="./index.html"><img src="img/logo.png" alt="لوگو مرسدس"></a>
         </div>
+        <nav class="offcanvas__menu mobile-menu">
+            <ul>
+                <li class="active"><a href="./index.html">خانه</a></li>
+                <li><a href="./car.html">خودروها</a></li>
+                <li><a href="./blog.html">بلاگ</a></li>
+                <li><a href="#">صفحات</a>
+                    <ul class="dropdown">
+                        <li><a href="./about.html">درباره ما</a></li>
+                        <li><a href="./car-details.html">جزئیات خودرو</a></li>
+                        <li><a href="./blog-details.html">جزئیات بلاگ</a></li>
+                    </ul>
+                </li>
+                <li><a href="./about.html">درباره ما</a></li>
+                <li><a href="./contact.html">تماس با ما</a></li>
+            </ul>
+        </nav>
         <div id="mobile-menu-wrap"></div>
         <ul class="offcanvas__widget__add">
-            <li><i class="fa fa-clock-o"></i> Week day: 08:00 am to 18:00 pm</li>
-            <li><i class="fa fa-envelope-o"></i> Info.colorlib@gmail.com</li>
+            <li><i class="fa fa-clock-o"></i> روزهای هفته: از ساعت 8:00 صبح تا 18:00 بعد از ظهر</li>
+            <li><i class="fa fa-envelope-o"></i> Info.parsa@gmail.com</li>
         </ul>
         <div class="offcanvas__phone__num">
             <i class="fa fa-phone"></i>
-            <span>(+12) 345 678 910</span>
+            <span>(+98) 21 1234 5678</span>
         </div>
         <div class="offcanvas__social">
             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -62,41 +83,88 @@
 
     <!-- Header Section Begin -->
     <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-            <a class="navbar-brand" href="#">about us</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="https://hamkari.com/parsa_moloodi">contact us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
-                </li>
-              </ul>
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <ul class="header__top__widget">
+                            <li><i class="fa fa-clock-o"></i> روزهای هفته: از ساعت 8:00 صبح تا 18:00 بعد از ظهر</li>
+                            <li><i class="fa fa-envelope-o"></i> Info.parsa@gmail.com</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="header__top__right">
+                            <div class="header__top__phone">
+                                <i class="fa fa-phone"></i>
+                                <span>(+98) 21 1234 5678</span>
+                            </div>
+                            <div class="header__top__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-google"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </nav>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt="لوگو مرسدس"></a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header__nav">
+                        <nav class="header__menu">
+                            <ul>
+                                <li class="active"><a href="./index.html">خانه</a></li>
+                                <li><a href="./car.html">خودروها</a></li>
+                                <li><a href="./blog.html">بلاگ</a></li>
+                                <li><a href="#">صفحات</a>
+                                    <ul class="dropdown">
+                                        <li><a href="./about.html">درباره ما</a></li>
+                                        <li><a href="./car-details.html">جزئیات خودرو</a></li>
+                                        <li><a href="./blog-details.html">جزئیات بلاگ</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="./about.html">درباره ما</a></li>
+                                <li><a href="./contact.html">تماس با ما</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header__nav__widget">
+                            <div class="header__nav__widget__btn">
+                                <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
+                            </div>
+                            <a href="#" class="primary-btn">اضافه کردن خودرو</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <span class="fa fa-bars"></span>
+            </div>
+        </div>
     </header>
     <!-- Header Section End -->
 
+    <!-- Header Section End -->
+
     <!-- Hero Section Begin -->
-    <section class="hero spad set-bg " data-setbg="img/1703003527610.avif">
+    <section class="hero spad set-bg" data-setbg="img/1703003527610.avif">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">
                     <div class="hero__text">
                         <div class="hero__text__title">
-                            <h2>The best outfit for athletic performance</h2>
+                            <h2>بهترین خودرو برای عملکرد سرعت</h2>
                         </div>
-                        <div class="hero__text__price">
-                        </div>
-                        <a href="#" class="btn btn-primary h-25 py-3"> review another cars</a>
-                        <a href="#" class="btn btn-outline-light py-3">start now</a>
+                        <div class="hero__text__price"></div>
+                        <a href="#" class="btn btn-primary h-25 py-3">بررسی خودروهای دیگر</a>
+                        <a href="#" class="btn btn-outline-light py-3">شروع کنید</a>
                     </div>
                 </div>
             </div>
@@ -105,83 +173,8 @@
     <!-- Hero Section End -->
 
     <!-- Feature Section Begin -->
-    <section class="feature spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="feature__text">
-                        <div class="section-title">
-                            <span>Our Feature</span>
-                            <h2>We Are a Trusted Name In Auto</h2>
-                        </div>
-                        <div class="feature__text__desc">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                                viverra maecenas accumsan lacus vel facilisis.</p>
-                        </div>
-                        <div class="feature__text__btn">
-                            <a href="#" class="primary-btn">About Us</a>
-                            <a href="#" class="primary-btn partner-btn">Our Partners</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 offset-lg-4">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-4 col-6">
-                            <div class="feature__item">
-                                <div class="feature__item__icon">
-                                    <img src="img/feature/feature-1.png" alt="">
-                                </div>
-                                <h6>Engine</h6>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-4 col-6">
-                            <div class="feature__item">
-                                <div class="feature__item__icon">
-                                    <img src="img/feature/feature-2.png" alt="">
-                                </div>
-                                <h6>Turbo</h6>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-4 col-6">
-                            <div class="feature__item">
-                                <div class="feature__item__icon">
-                                    <img src="img/feature/feature-3.png" alt="">
-                                </div>
-                                <h6>Colling</h6>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-4 col-6">
-                            <div class="feature__item">
-                                <div class="feature__item__icon">
-                                    <img src="img/feature/feature-4.png" alt="">
-                                </div>
-                                <h6>Suspension</h6>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-4 col-6">
-                            <div class="feature__item">
-                                <div class="feature__item__icon">
-                                    <img src="img/feature/feature-5.png" alt="">
-                                </div>
-                                <h6>Electrical</h6>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-4 col-6">
-                            <div class="feature__item">
-                                <div class="feature__item__icon">
-                                    <img src="img/feature/feature-6.png" alt="">
-                                </div>
-                                <h6>Brakes</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <iframe style="width: 100%; height: 100%;" src="__model__/__model_view__.html"></iframe>
+
     <!-- Feature Section End -->
 
     <!-- Car Section Begin -->
@@ -190,8 +183,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <span>Our Car</span>
-                        <h2>Best Vehicle Offers</h2>
+                        <span>خودروهای ما</span>
+                        <h2>بهترین پیشنهادهای خودرو</h2>
                     </div>
                 </div>
             </div>
@@ -199,24 +192,24 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="img/cars/car-1.jpg" alt="">
-                            <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-6.jpg" alt="">
-                            <img src="img/cars/car-3.jpg" alt="">
+                            <img src="img/cars/car-1.jpg" alt="پورشه کاین توربو اس">
+                            <img src="img/cars/car-8.jpg" alt="پورشه کاین توربو اس">
+                            <img src="img/cars/car-6.jpg" alt="پورشه کاین توربو اس">
+                            <img src="img/cars/car-3.jpg" alt="پورشه کاین توربو اس">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
                                 <div class="label-date">2016</div>
-                                <h5><a href="#">Porsche cayenne turbo s</a></h5>
+                                <h5><a href="#">پورشه کاین توربو اس</a></h5>
                                 <ul>
-                                    <li><span>35,000</span> mi</li>
-                                    <li>Auto</li>
-                                    <li><span>700</span> hp</li>
+                                    <li><span>35,000</span> کیلومتر</li>
+                                    <li>اتوماتیک</li>
+                                    <li><span>700</span> اسب بخار</li>
                                 </ul>
                             </div>
                             <div class="car__item__price">
-                                <span class="car-option">For Rent</span>
-                                <h6>$218<span>/Month</span></h6>
+                                <span class="car-option">برای اجاره</span>
+                                <h6>$218<span>/ماه</span></h6>
                             </div>
                         </div>
                     </div>
@@ -224,23 +217,23 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="img/cars/car-2.jpg" alt="">
-                            <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-6.jpg" alt="">
-                            <img src="img/cars/car-4.jpg" alt="">
+                            <img src="img/cars/car-2.jpg" alt="تویوتا کمری ASV50L-Jeteku">
+                            <img src="img/cars/car-8.jpg" alt="تویوتا کمری ASV50L-Jeteku">
+                            <img src="img/cars/car-6.jpg" alt="تویوتا کمری ASV50L-Jeteku">
+                            <img src="img/cars/car-4.jpg" alt="تویوتا کمری ASV50L-Jeteku">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
                                 <div class="label-date">2020</div>
-                                <h5><a href="#">Toyota camry asv50l-jeteku</a></h5>
+                                <h5><a href="#">تویوتا کمری ASV50L-Jeteku</a></h5>
                                 <ul>
-                                    <li><span>35,000</span> mi</li>
-                                    <li>Auto</li>
-                                    <li><span>700</span> hp</li>
+                                    <li><span>35,000</span> کیلومتر</li>
+                                    <li>اتوماتیک</li>
+                                    <li><span>700</span> اسب بخار</li>
                                 </ul>
                             </div>
                             <div class="car__item__price">
-                                <span class="car-option sale">For Sale</span>
+                                <span class="car-option sale">برای فروش</span>
                                 <h6>$73,900</h6>
                             </div>
                         </div>
@@ -249,24 +242,24 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="img/cars/car-3.jpg" alt="">
-                            <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-6.jpg" alt="">
-                            <img src="img/cars/car-5.jpg" alt="">
+                            <img src="img/cars/car-3.jpg" alt="BMW S1000RR 2019 M">
+                            <img src="img/cars/car-8.jpg" alt="BMW S1000RR 2019 M">
+                            <img src="img/cars/car-6.jpg" alt="BMW S1000RR 2019 M">
+                            <img src="img/cars/car-5.jpg" alt="BMW S1000RR 2019 M">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
                                 <div class="label-date">2017</div>
-                                <h5><a href="#">Bmw s1000rr 2019 m</a></h5>
+                                <h5><a href="#">BMW S1000RR 2019 M</a></h5>
                                 <ul>
-                                    <li><span>35,000</span> mi</li>
-                                    <li>Auto</li>
-                                    <li><span>700</span> hp</li>
+                                    <li><span>35,000</span> کیلومتر</li>
+                                    <li>اتوماتیک</li>
+                                    <li><span>700</span> اسب بخار</li>
                                 </ul>
                             </div>
                             <div class="car__item__price">
-                                <span class="car-option">For Rent</span>
-                                <h6>$299<span>/Month</span></h6>
+                                <span class="car-option">برای اجاره</span>
+                                <h6>$299<span>/ماه</span></h6>
                             </div>
                         </div>
                     </div>
@@ -274,23 +267,23 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="img/cars/car-4.jpg" alt="">
-                            <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-2.jpg" alt="">
-                            <img src="img/cars/car-1.jpg" alt="">
+                            <img src="img/cars/car-4.jpg" alt="لامبورگینی هوراکان EVO">
+                            <img src="img/cars/car-8.jpg" alt="لامبورگینی هوراکان EVO">
+                            <img src="img/cars/car-2.jpg" alt="لامبورگینی هوراکان EVO">
+                            <img src="img/cars/car-1.jpg" alt="لامبورگینی هوراکان EVO">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
                                 <div class="label-date">2019</div>
-                                <h5><a href="#">Lamborghini huracan evo</a></h5>
+                                <h5><a href="#">لامبورگینی هوراکان EVO</a></h5>
                                 <ul>
-                                    <li><span>35,000</span> mi</li>
-                                    <li>Auto</li>
-                                    <li><span>700</span> hp</li>
+                                    <li><span>35,000</span> کیلومتر</li>
+                                    <li>اتوماتیک</li>
+                                    <li><span>700</span> اسب بخار</li>
                                 </ul>
                             </div>
                             <div class="car__item__price">
-                                <span class="car-option sale">For Sale</span>
+                                <span class="car-option sale">برای فروش</span>
                                 <h6>$120,000</h6>
                             </div>
                         </div>
@@ -299,24 +292,24 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="img/cars/car-5.jpg" alt="">
-                            <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-7.jpg" alt="">
-                            <img src="img/cars/car-2.jpg" alt="">
+                            <img src="img/cars/car-5.jpg" alt="آئودی Q8 2020">
+                            <img src="img/cars/car-8.jpg" alt="آئودی Q8 2020">
+                            <img src="img/cars/car-7.jpg" alt="آئودی Q8 2020">
+                            <img src="img/cars/car-2.jpg" alt="آئودی Q8 2020">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
                                 <div class="label-date">2018</div>
-                                <h5><a href="#">Audi q8 2020</a></h5>
+                                <h5><a href="#">آئودی Q8 2020</a></h5>
                                 <ul>
-                                    <li><span>35,000</span> mi</li>
-                                    <li>Auto</li>
-                                    <li><span>700</span> hp</li>
+                                    <li><span>35,000</span> کیلومتر</li>
+                                    <li>اتوماتیک</li>
+                                    <li><span>700</span> اسب بخار</li>
                                 </ul>
                             </div>
                             <div class="car__item__price">
-                                <span class="car-option">For Rent</span>
-                                <h6>$319<span>/Month</span></h6>
+                                <span class="car-option">برای اجاره</span>
+                                <h6>$319<span>/ماه</span></h6>
                             </div>
                         </div>
                     </div>
@@ -324,23 +317,23 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="img/cars/car-6.jpg" alt="">
-                            <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-3.jpg" alt="">
-                            <img src="img/cars/car-1.jpg" alt="">
+                            <img src="img/cars/car-6.jpg" alt="موستانگ شلبی GT500">
+                            <img src="img/cars/car-8.jpg" alt="موستانگ شلبی GT500">
+                            <img src="img/cars/car-3.jpg" alt="موستانگ شلبی GT500">
+                            <img src="img/cars/car-1.jpg" alt="موستانگ شلبی GT500">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
                                 <div class="label-date">2016</div>
-                                <h5><a href="#">Mustang shelby gt500</a></h5>
+                                <h5><a href="#">موستانگ شلبی GT500</a></h5>
                                 <ul>
-                                    <li><span>35,000</span> mi</li>
-                                    <li>Auto</li>
-                                    <li><span>700</span> hp</li>
+                                    <li><span>35,000</span> کیلومتر</li>
+                                    <li>اتوماتیک</li>
+                                    <li><span>700</span> اسب بخار</li>
                                 </ul>
                             </div>
                             <div class="car__item__price">
-                                <span class="car-option sale">For Sale</span>
+                                <span class="car-option sale">برای فروش</span>
                                 <h6>$730,900</h6>
                             </div>
                         </div>
@@ -349,24 +342,24 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="img/cars/car-7.jpg" alt="">
-                            <img src="img/cars/car-2.jpg" alt="">
-                            <img src="img/cars/car-4.jpg" alt="">
-                            <img src="img/cars/car-1.jpg" alt="">
+                            <img src="img/cars/car-7.jpg" alt="لامبورگینی آونتادور A90">
+                            <img src="img/cars/car-2.jpg" alt="لامبورگینی آونتادور A90">
+                            <img src="img/cars/car-4.jpg" alt="لامبورگینی آونتادور A90">
+                            <img src="img/cars/car-1.jpg" alt="لامبورگینی آونتادور A90">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
                                 <div class="label-date">2020</div>
-                                <h5><a href="#">Lamborghini aventador A90</a></h5>
+                                <h5><a href="#">لامبورگینی آونتادور A90</a></h5>
                                 <ul>
-                                    <li><span>35,000</span> mi</li>
-                                    <li>Auto</li>
-                                    <li><span>700</span> hp</li>
+                                    <li><span>35,000</span> کیلومتر</li>
+                                    <li>اتوماتیک</li>
+                                    <li><span>700</span> اسب بخار</li>
                                 </ul>
                             </div>
                             <div class="car__item__price">
-                                <span class="car-option">For Rent</span>
-                                <h6>$422<span>/Month</span></h6>
+                                <span class="car-option">برای اجاره</span>
+                                <h6>$422<span>/ماه</span></h6>
                             </div>
                         </div>
                     </div>
@@ -374,24 +367,24 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-3.jpg" alt="">
-                            <img src="img/cars/car-5.jpg" alt="">
-                            <img src="img/cars/car-2.jpg" alt="">
+                            <img src="img/cars/car-8.jpg" alt="پورشه کاین توربو اس">
+                            <img src="img/cars/car-3.jpg" alt="پورشه کاین توربو اس">
+                            <img src="img/cars/car-5.jpg" alt="پورشه کاین توربو اس">
+                            <img src="img/cars/car-2.jpg" alt="پورشه کاین توربو اس">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
                                 <div class="label-date">2017</div>
-                                <h5><a href="#">Porsche cayenne turbo s</a></h5>
+                                <h5><a href="#">پورشه کاین توربو اس</a></h5>
                                 <ul>
-                                    <li><span>35,000</span> mi</li>
-                                    <li>Auto</li>
-                                    <li><span>700</span> hp</li>
+                                    <li><span>35,000</span> کیلومتر</li>
+                                    <li>اتوماتیک</li>
+                                    <li><span>700</span> اسب بخار</li>
                                 </ul>
                             </div>
                             <div class="car__item__price">
-                                <span class="car-option">For Rent</span>
-                                <h6>$322<span>/Month</span></h6>
+                                <span class="car-option">برای اجاره</span>
+                                <h6>$322<span>/ماه</span></h6>
                             </div>
                         </div>
                     </div>
@@ -408,28 +401,23 @@
                 <div class="col-lg-5">
                     <div class="chooseus__text">
                         <div class="section-title">
-                            <h2>such a wow 💀</h2>
-                            <p>Duis aute irure dolorin reprehenderits volupta velit dolore fugiat nulla pariatur
-                                excepteur sint occaecat cupidatat.</p>
+                            <h2>چرا باید از ما انتخاب کنید؟</h2>
+                            <p>باشگاه مرسدس بهترین خودروهای لوکس را برای شما ارائه می‌دهد. با تجربه‌ای بیش از دو دهه در این صنعت، ما به شما کمک می‌کنیم تا بهترین خودرو را برای نیازهای خود انتخاب کنید.</p>
                         </div>
                         <ul>
-                            <li><i class="fa fa-check-circle"></i> Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit.</li>
-                            <li><i class="fa fa-check-circle"></i> Integer et nisl et massa tempor ornare vel id orci.
-                            </li>
-                            <li><i class="fa fa-check-circle"></i> Nunc consectetur ligula vitae nisl placerat tempus.
-                            </li>
-                            <li><i class="fa fa-check-circle"></i> Curabitur quis ante vitae lacus varius pretium.</li>
+                            <li><i class="fa fa-check-circle"></i> بهترین خودروهای لوکس را ارائه می‌دهیم.</li>
+                            <li><i class="fa fa-check-circle"></i> خدمات پس از فروش بی‌نظیر.</li>
+                            <li><i class="fa fa-check-circle"></i> تضمین کیفیت و اصالت کالا.</li>
+                            <li><i class="fa fa-check-circle"></i> قیمت‌های مناسب و منافذ فروش متعدد.</li>
                         </ul>
-                        <a href="https://hamkari.com/parsa_moloodi" class="btn primary-btn">About Us</a>
+                        <a href="https://hamkari.com/parsa_moloodi" class="btn primary-btn">درباره ما</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="chooseus__video set-bg">
-            <img src="img/1733132021986.avif" alt="">
-            <a href="https://www.youtube.com/watch?v=Xd0Ok-MkqoE"
-                class="play-btn video-popup"><i class="fa fa-play"></i></a>
+            <img src="img/1733132021986.avif" alt="ویدئوی معرفی باشگاه مرسدس">
+            <a href="https://www.youtube.com/watch?v=Xd0Ok-MkqoE" class="play-btn video-popup"><i class="fa fa-play"></i></a>
         </div>
     </section>
     <!-- Chooseus Section End -->
@@ -440,10 +428,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <span>Our Blog</span>
-                        <h2>Latest News Updates</h2>
-                        <p>Sign up for the latest Automobile Industry information and more. Duis aute<br /> irure
-                            dolorin reprehenderits volupta velit dolore fugiat.</p>
+                        <span>بلاگ ما</span>
+                        <h2>آخرین اخبار و بروزرسانی‌ها</h2>
+                        <p>برای دریافت آخرین اطلاعات صنعت خودرو و بیشتر ثبت نام کنید. دویس اوته<br /> ایروره این رپره اندره دیت ولیت دالوره فوگیات.</p>
                     </div>
                 </div>
             </div>
@@ -452,17 +439,15 @@
                     <div class="latest__blog__item">
                         <div class="latest__blog__item__pic set-bg" data-setbg="img/latest-blog/lb-1.jpg">
                             <ul>
-                                <li>By Polly Williams</li>
-                                <li>Dec 19, 2018</li>
-                                <li>Comment</li>
+                                <li>توسط پارسا مولودی</li>
+                                <li>19 دسامبر 2018</li>
+                                <li>نظرات</li>
                             </ul>
                         </div>
                         <div class="latest__blog__item__text">
-                            <h5>Benjamin Franklin S Method Of Habit Formation</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel
-                                facilisis.</p>
-                            <a href="#">View More <i class="fa fa-long-arrow-right"></i></a>
+                            <h5>روش بنجامین فرانکلین برای ایجاد عادت</h5>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                            <a href="#">بیشتر ببینید <i class="fa fa-long-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -470,17 +455,15 @@
                     <div class="latest__blog__item">
                         <div class="latest__blog__item__pic set-bg" data-setbg="img/latest-blog/lb-2.jpg">
                             <ul>
-                                <li>By Mattie Ramirez</li>
-                                <li>Dec 19, 2018</li>
-                                <li>Comment</li>
+                                <li>توسط پارسا مولودی</li>
+                                <li>19 دسامبر 2018</li>
+                                <li>نظرات</li>
                             </ul>
                         </div>
                         <div class="latest__blog__item__text">
-                            <h5>How To Set Intentions That Energize You</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel
-                                facilisis.</p>
-                            <a href="#">View More <i class="fa fa-long-arrow-right"></i></a>
+                            <h5>چگونه هدف‌هایی تعیین کنیم که شما را انرژی بخشد</h5>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                            <a href="#">بیشتر ببینید <i class="fa fa-long-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -488,17 +471,15 @@
                     <div class="latest__blog__item">
                         <div class="latest__blog__item__pic set-bg" data-setbg="img/latest-blog/lb-3.jpg">
                             <ul>
-                                <li>By Nicholas Brewer</li>
-                                <li>Dec 19, 2018</li>
-                                <li>Comment</li>
+                                <li>توسط پارسا مولودی</li>
+                                <li>19 دسامبر 2018</li>
+                                <li>نظرات</li>
                             </ul>
                         </div>
                         <div class="latest__blog__item__text">
-                            <h5>Burning Desire Golden Key Or Red Herring</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel
-                                facilisis.</p>
-                            <a href="#">View More <i class="fa fa-long-arrow-right"></i></a>
+                            <h5>آرزوی سوزان کلید طلایی یا گمراه کننده؟</h5>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                            <a href="#">بیشتر ببینید <i class="fa fa-long-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -513,14 +494,14 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6">
                     <div class="cta__item set-bg" data-setbg="img/cta/cta-1.jpg">
-                        <h4>Do You Want To Buy A Car</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                        <h4>آیا می‌خواهید خودرو بخرید؟</h4>
+                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="cta__item set-bg" data-setbg="img/cta/cta-2.jpg">
-                        <h4>Do You Want To Rent A Car</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                        <h4>آیا می‌خواهید خودرو اجاره کنید؟</h4>
+                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
                     </div>
                 </div>
             </div>
@@ -535,10 +516,9 @@
                 <div class="col-lg-4 col-md-4">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="#"><img style="height: 120px;" src="img/logotype.png" alt=""></a>
+                            <a href="#"><img src="img/logotype.png" alt="لوگو مرسدس"></a>
                         </div>
-                        <p>Steigen Sie in Ihre individuelle Newsletter-Welt von Mercedes-Benz ein.
-                            Melden Sie sich jetzt zum Mercedes-Benz Newsletter an und erleben Sie Innovationen, E-Mobilität, Nachhaltigkeit und die Highlights unserer Modelle in Echtzeit ‒ so persönlich wie noch nie.</p>
+                        <p>به دنیای شخصی‌سازی‌شده خبرنامه مرسدس‌بنز خوش آمدید. اکنون به خبرنامه مرسدس‌بنز اشتراک بگذارید و نوآوری‌ها، حمل‌ونقل برقی، پایداری و برترین‌های مدل‌های ما را به صورت زنده تجربه کنید ‒ شخصی‌ترین تجربه تا به امروز.</p>
                         <div class="footer__social">
                             <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
                             <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
@@ -549,41 +529,41 @@
                 </div>
                 <div class="col-lg-2 offset-lg-1 col-md-3">
                     <div class="footer__widget">
-                        <h5>Infomation</h5>
+                        <h5>اطلاعات</h5>
                         <ul>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Purchase</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Payemnt</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Shipping</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Return</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> خرید</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> پرداخت</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> حمل و نقل</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> بازگشت</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3">
                     <div class="footer__widget">
-                        <h5>Infomation</h5>
+                        <h5>اطلاعات</h5>
                         <ul>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Hatchback</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Sedan</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> SUV</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Crossover</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> هاچ‌بک</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> سدان</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> اس‌یووی</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> کراس‌اوور</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="footer__brand">
-                        <h5>Top Brand</h5>
+                        <h5>برندهای برتر</h5>
                         <ul>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> cls</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> mercedes</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Brabus</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> auther</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> CLS</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> مرسدس</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> برابوس</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> آتر</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             <div class="footer__copyright__text">
-                <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
+                <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> کلیه حقوق محفوظ است</p>
             </div>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
         </div>
@@ -595,7 +575,7 @@
         <div class="h-100 d-flex align-items-center justify-content-center">
             <div class="search-close-switch">+</div>
             <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Search here.....">
+                <input type="text" id="search-input" placeholder="جستجو کنید.....">
             </form>
         </div>
     </div>
